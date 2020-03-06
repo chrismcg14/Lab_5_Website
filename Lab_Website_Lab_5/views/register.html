@@ -1,0 +1,118 @@
+<!-- Registration Page -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>Register Page</title>
+	<link rel='icon' href='../resources/img/favicon.ico' type='image/x-icon'/>
+    <!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<link href="../resources/css/my_style.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+  	<img src="../resources/img/beproudcapaabanner.jpg" class="img-fluid" alt="Registration Page Banner for CU Football">
+      <br>
+  	<br>
+  	<div class="container">
+  		<form action="home.html">
+
+        <div class="form-group">
+          <label for="formGroupEnterName">Full Name</label>
+          <input type="text" class="form-control" id="formGroupEnterName" placeholder="Enter Name">
+        </div>
+
+        <div class="form-group">
+          <label for="formGroupEnterEmail">Email</label>
+          <input type="text" class="form-control" id="formGroupEnterEmail" placeholder="Enter Email">
+        </div>
+
+        <div class="form-group">
+          <label for="formGroupEnterPassword">Password</label>
+          <input type="text" class="form-control" id="formGroupEnterPassword" placeholder="Enter Password">
+        </div>
+
+        <div class="form-group">
+          <label for="formGroupConfirmPassword">Confirm Password</label>
+          <input type="text" class="form-control" id="formGroupConfirmPassword" placeholder="Confirm Password">
+        </div>
+
+        <div class="form-group">
+          <label for="formGroupConfirmPassword">CU Boulder Alumni?</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="cuBoulderAlumni" id="cuBoulderAlumniY" value="Yes">
+            <label class="form-check-label" for="cuBoulderAlumni">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="cuBoulderAlumni" id="cuBoulderAlumniY" value="No">
+            <label class="form-check-label" for="cuBoulderAlumni">
+              No
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="formGroupConfirmPassword">CU Boulder Student?</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="cuBoulderStudent" id="cuBoulderStudentY" value="Yes" onclick="viewStudentStatus('student_status', 1);">
+            <label class="form-check-label" for="cuBoulderStudent">
+              Yes
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="cuBoulderStudent" id="cuBoulderStudentN" value="No" onclick="viewStudentStatus('student_status', 0);">
+            <label class="form-check-label" for="cuBoulderStudent">
+              No
+            </label>
+          </div>
+        </div>
+
+
+        <div class="form-group" id="student_status" style="visibility:hidden">
+          <label for="formGroupConfirmPassword">Student Status</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="underOrGrad" id="undergrad" value="u" onclick="viewStudentStatus('undergrad_select', 1); viewStudentStatus('grad_select', 0);">
+            <label class="form-check-label" for="cuBoulderStudent">
+              Undergraduate
+            </label>
+            </br>
+            <select class="form-control" id="undergrad_select">
+              <option>Freshman</option>
+              <option>Sophomore</option>
+              <option>Junior</option>
+              <option>Senior</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="underOrGrad" id="grad" value="g" onclick="viewStudentStatus('undergrad_select', 0); viewStudentStatus('grad_select', 1);">
+            <label class="form-check-label" for="cuBoulderStudent">
+              Graduate
+            </label>
+            </br>
+            <select class="form-control" id="grad_select">
+              <option>MA</option>
+              <option>MBA</option>
+              <option>PhD</option>
+            </select>
+          </div>
+        </div>
+
+        <!--https://stackoverflow.com/questions/3303675/how-to-make-an-input-type-button-act-like-a-hyperlink-and-redirect-using-a-get-r-->
+  			<input type="submit" value="Submit" class="btn btn-primary btn-block" onclick="window.location='/home.html';">
+  		</form>
+  	</div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="../resources/js/my_scripts.js"></script>
+  </body>
+</html>
